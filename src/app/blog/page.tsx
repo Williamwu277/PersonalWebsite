@@ -1,54 +1,45 @@
-import Image from "next/image";
+import Link from "next/link";
+import TagGroup from "../../components/tagGroup";
+import { JSX } from "react";
+import { data } from "../../blog/data";
 
 export default function Blog() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_5px] items-start justify-items-center min-h-screen p-8 gap-16 sm:p-5 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
+  const pages: Array<{
+    url: string,
+    title: string,
+    desc: string,
+    date: string,
+    tags: Array<string>,
+    blog: JSX.Element
+  }> = data;
+
+  return (
+    <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20">
+      <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
+        <h1 className="text-4xl font-extrabold">Blog</h1>
+      </div>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      <div className="flex w-11/12">
+        <p className="text-sm inline-block">
+          Here are some of my thoughts on various unrelated topics. These may include reflections,
+          Computer Science proofs, feelings about my projects or even cooking recipes I have fooled around with.
+        </p>
+      </div>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      {
+        pages.map((page, index) => (
+          <Link href={"/blog/" + page.url} key={index} className="grid grid-cols-1 md:grid-cols-[auto_auto] border-4 border-blue-300 rounded-lg w-full p-3">
+            <p className="font-bold text-sm">{page.title}</p>
+            <div className="flex w-full md:justify-end">
+              <p className="text-sm">{page.date}</p>
+            </div>
+            <hr className="w-full border-0.5 mb-2 border-blue-300 col-span-2"></hr>
+            <p className="text-xs col-span-2 mb-2">{page.desc}</p>
+            <TagGroup tags={page.tags}/>
+          </Link>
+        ))
+      }
     </div>
   );
 }

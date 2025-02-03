@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5">
+    <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20">
       <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
         <h1 className="text-4xl font-extrabold">About</h1>
       </div>
-      <hr className="w-full h-0.25 border-blue-300 mb-3"></hr>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <p className="w-11/12 text-sm mb-3 font-[family-name:var(--font-geist-sans)]">
         My name is William and I'm a CS student at the University of Waterloo. I'm passionate about CS
         because of its versatility—by thinking outside of the box and utilizing what I've learned, I can turn my ideas into reality.
@@ -19,6 +19,7 @@ export default function About() {
         Currently, I'm interested in exploring AI
         and seeking opportunities to apply my problem-solving and technical skills to real-world challenges.
       </p>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <Image 
         className="rounded-lg max-w-[16rem] w-4/5 border-4 border-blue-300"
         src="/portfolioImage.png"

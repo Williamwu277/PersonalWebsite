@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex ml-5 mr-5 flex-col h-screen justify-center items-center font-[family-name:var(--font-geist-sans)]">
       <div>
-        <h1 className="inline text-8xl font-extrabold">
+        <h1 className="inline text-6xl lg:text-8xl font-extrabold">
           {
             firstPart.split('').map((letter, index) => (
               <motion.span
@@ -33,7 +33,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               transition={{ duration: 0.1, delay: (firstPart.length + index) * 0.1}}
             >
-              <h1 className="inline text-8xl font-extrabold bg-indigo-900">{letter}</h1>
+              <h1 className="inline text-6xl lg:text-8xl font-extrabold bg-indigo-900">{letter}</h1>
             </motion.span>
           ))
         }

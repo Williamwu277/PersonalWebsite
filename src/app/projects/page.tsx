@@ -1,54 +1,32 @@
-import Image from "next/image";
+import ProjectView from "../../components/projectView";
+import TagGroup from "../../components/tagGroup";
 
 export default function Projects() {
   return (
-    <div className="grid grid-rows-[20px_1fr_5px] items-start justify-items-center min-h-screen p-8 gap-16 sm:p-5 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-3xl w-4/5 mb-20">
+      <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
+        <h1 className="text-4xl font-extrabold">Projects</h1>
+      </div>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      <div className="flex flex-col w-11/12">
+        <p className="text-sm mb-2">
+          Here is a collection of projects that I'm particularly proud of. Feel free to explore!
+          You can find more on the <a href="https://github.com/Williamwu277" className="text-blue-300 font-bold">Github</a>
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-[100px_auto] gap-y-2 mb-1">
+          <p className="text-sm font-bold underline">Languages</p>
+          <TagGroup tags={["Python", "C++", "Java", "Javascript", "HTML", "CSS", "SQL"]}/>
+          <p className="text-sm font-bold underline">Frameworks</p>
+          <TagGroup tags={["Flask", "FastAPI", "NextJS"]}/>
+          <p className="text-sm font-bold underline">Technologies</p>
+          <TagGroup tags={["React", "Pandas", "Matplotlib", "PostgreSQL"]}/>
         </div>
-      </main>
+      </div>
+      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full grid-rows-[auto] place-items-center">
+        <ProjectView name="project1" src="/portfolioImage.png" link="http://localhost:3000/projects" tags={["hi", "Next.js", "Next.js", "Next.js", "Next.js","Next.js", "Next.js"]}/>
+        <ProjectView name="project1" src="/portfolioImage.png" link="http://localhost:3000/projects" tags={["hi", "bye"]}/>
+      </div>
     </div>
   );
 }
