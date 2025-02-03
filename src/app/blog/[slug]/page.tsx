@@ -3,7 +3,9 @@ import { JSX } from "react";
 import { data } from "../../../blog/data";
 
 
-export default function BlogPage({ params } :  { params:  { slug : string} }) {
+export default async function BlogPage({ params } :  { params: Promise<{ slug: string }> }) {
+
+    const slug = (await params).slug;
 
     const pages: Array<{
         url: string,
@@ -20,7 +22,7 @@ export default function BlogPage({ params } :  { params:  { slug : string} }) {
         desc: string,
         date: string,
         blog: JSX.Element
-    } | undefined = pages.find(page => page.url === params.slug);
+    } | undefined = pages.find(page => page.url === slug);
 
     if(typeof renderedPage === "undefined"){
         return notFound();
