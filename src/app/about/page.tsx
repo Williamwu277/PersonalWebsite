@@ -22,7 +22,7 @@ export default function About() {
       <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <Image 
         className="rounded-lg max-w-[16rem] w-4/5 border-4 border-blue-300"
-        src="/portfolioImage.png"
+        src="/portfolioImage.jpg"
         alt="Photo"
         width={300}
         height={300}
