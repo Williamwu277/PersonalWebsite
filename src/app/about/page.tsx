@@ -8,15 +8,15 @@ export default function About() {
       </div>
       <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <p className="w-11/12 text-sm mb-3 font-[family-name:var(--font-geist-sans)]">
-        My name is William and I'm a CS student at the University of Waterloo. I'm passionate about CS
-        because of its versatility—by thinking outside of the box and utilizing what I've learned, I can turn my ideas into reality.
+        My name is William and I&apos;m a CS student at the University of Waterloo. I&apos;m passionate about CS
+        because of its versatility—by thinking outside of the box and utilizing what I&apos;ve learned, I can turn my ideas into reality.
         <br></br><br></br>
-        While organizing competitive programming contests on DMOJ, I've deepened my knowledge in algorithms and 
+        While organizing competitive programming contests on DMOJ, I&apos;ve deepened my knowledge in algorithms and 
         data-structures and sharpened my critical thinking. Moreover, by participating in a multitude
-        of hackathons I've become proficient in various back-end technologies. More recently, I've been 
+        of hackathons I&apos;ve become proficient in various back-end technologies. More recently, I&apos;ve been 
         building on my foundations by engineering and deploying full-stack applications.
         <br></br><br></br>
-        Currently, I'm interested in exploring AI
+        Currently, I&apos;m interested in exploring AI
         and seeking opportunities to apply my problem-solving and technical skills to real-world challenges.
       </p>
       <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>

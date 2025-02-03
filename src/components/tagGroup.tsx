@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function TagGroup( { tags } : { tags: Array<string> } ) {
     return (
         <div className="flex flex-wrap gap-1 w-full">

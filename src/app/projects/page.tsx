@@ -10,7 +10,7 @@ export default function Projects() {
       <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <div className="flex flex-col w-11/12">
         <p className="text-sm mb-3">
-          Here is a collection of projects that I'm particularly proud of. Feel free to explore!
+          Here is a collection of projects that I&apos;m particularly proud of. Feel free to explore!
           You can find more on the <a href="https://github.com/Williamwu277" className="text-blue-300 font-bold">Github</a>. 
           As well, you can find many of my hackathon participations on <a href="https://github.com/andrewchu16/eyedentify/" className="text-blue-300 font-bold">Devpost</a>
         </p>

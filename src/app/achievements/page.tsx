@@ -9,7 +9,7 @@ export default function Achievements() {
       <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
       <div className="flex w-11/12">
         <p className="text-sm inline-block">
-          Here is a list of achievements that I'm particularly proud about!
+          Here is a list of achievements that I&apos;m particularly proud about!
           Achievements are sorted by date and a colour tier system from Gold to Bronze 🟨⬜🟫.
           Click on an achievement for more information.
         </p>
@@ -49,6 +49,15 @@ export default function Achievements() {
         description="Achieved a placement of 111/3947 with a score of 47/75 on CCC Senior 2024"
         date="Feb 2024"
         link="https://cemc.uwaterloo.ca/resources/past-contests?grade=All&academic_year=All&contest_category=29"
+        importance="Silver"
+      />
+
+      <AchievementView 
+        title="Codeforces" 
+        achieve="1893 Rating" 
+        description="Reached a peak rating of 1893 (Expert ranking and top 5%) on Codeforces" 
+        date="Aug 2023" 
+        link="https://codeforces.com/profle/washed" 
         importance="Silver"
       />
 
@@ -94,15 +103,6 @@ export default function Achievements() {
         description="Reached the highest division of the USA Computing Olympiad" 
         date="Dec 2022" 
         link="https://usaco.org/current/data/dec22_gold_results.html" 
-        importance="Silver"
-      />
-
-      <AchievementView 
-        title="Codeforces" 
-        achieve="1893 Rating" 
-        description="Reached a peak rating of 1893 (Expert ranking and top 5%) on Codeforces" 
-        date="" 
-        link="https://codeforces.com/profle/washed" 
         importance="Silver"
       />
 
