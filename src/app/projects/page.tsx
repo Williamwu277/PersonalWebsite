@@ -16,7 +16,7 @@ export default function Projects() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-[100px_auto] gap-y-2 mb-1">
           <p className="text-sm font-bold underline">Languages</p>
-          <TagGroup tags={["Python", "Java", "C++", "HTML", "Javascript", "CSS", "SQL", "R", "Racket"]}/>
+          <TagGroup tags={["Python", "Java", "C++", "HTML", "Javascript", "Typescript", "CSS", "SQL", "R", "Racket"]}/>
           <p className="text-sm font-bold underline">Frameworks</p>
           <TagGroup tags={["Flask", "FastAPI", "React", "Next.js", "Streamlit"]}/>
           <p className="text-sm font-bold underline">Technologies</p>
