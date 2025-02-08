@@ -57,7 +57,7 @@ export default function Achievements() {
         achieve="1893 Rating" 
         description="Reached a peak rating of 1893 (Expert ranking and top 5%) on Codeforces" 
         date="Aug 2023" 
-        link="https://codeforces.com/profle/washed" 
+        link="https://codeforces.com/profile/washed" 
         importance="Silver"
       />
 
