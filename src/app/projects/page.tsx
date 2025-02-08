@@ -48,7 +48,7 @@ export default function Projects() {
         />
         <ProjectView 
           name="DMOJ Contest Organizing"
-          desc="Organized 9 competitive programming contests on the DMOJ platform, with 1500+ participants combined. My problems have received 13000+ solve attempts."
+          desc="Organized 9 competitive programming contests on the DMOJ platform, with 1500+ participants combined. My problems have received 13000+ solve attempts"
           src="/portfolioAAC.jpg" 
           link="https://dmoj.ca/user/williamwu277" 
           tags={["Python", "Java", "C++", "YAML", "Problem Solving", "Blackbox Testing"]}
@@ -69,7 +69,7 @@ export default function Projects() {
         />
         <ProjectView 
           name="LemonAid"
-          desc="A user-time-efficient pantry web app leveraging OpenAI's APIs to scan groceries and generate recipes given pantry contents."
+          desc="A user-time-efficient pantry web app leveraging OpenAI's APIs to scan groceries and generate recipes given pantry contents"
           src="/portfolioLemonAid.jpg" 
           link="https://github.com/1spyral/LemonAid" 
           tags={["Python", "OpenAI", "Flask", "JSON", "DALL-E", "GPT-4", "IgnitionHacks"]}

@@ -2,7 +2,7 @@
 
 export default function Footbar() {
     return (
-      <div className="fixed bottom-0 right-0 w-full bg-[#0a0a0a] pt-5 font-[family-name:var(--font-geist-mono)]">
+      <div className="fixed bottom-0 right-0 w-full bg-[#000000] pt-5 font-[family-name:var(--font-geist-mono)]">
           <div className="mb-3 flex gap-6 flex-wrap items-center justify-center text-xs">
               <a className="text-sm hover:underline" href="https://www.linkedin.com/in/williamwu277/" target="_blank">LinkedIn</a>
               <a className="text-sm hover:underline" href="https://github.com/Williamwu277" target="_blank">Github</a>
