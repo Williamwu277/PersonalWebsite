@@ -13,10 +13,20 @@ import Image, { StaticImageData } from "next/image";
 
 export default function Home() {
   const words: Array<string> = ["Welcome", "to ", "My ", "World."]
+  const images: StaticImageData[] = [frontPage1, frontPage2, frontPage3, frontPage4];
   const router = useRouter();
   const [ clickable, setClickable ] = useState(false);
   const [ imgPaths, setImgPaths ] = useState<null[] | StaticImageData[]>([null, null, null, null]);
   const { toggleAnimation, toggleHandler } = useContext(PageContext);
+
+  const pictureFrame = (
+    <svg className="col-start-1 row-start-1 w-full h-full" viewBox="0 0 300 500" preserveAspectRatio="none">
+      <rect x="10" y="10" width="280" height="480" fill="none" stroke="#312e81" strokeWidth="20" rx="0"/>
+      <line x1="150" y1="10" x2="150" y2="490" stroke="#312e81" strokeWidth="20"/>
+      <line x1="10" y1="170" x2="290" y2="170" stroke="#312e81" strokeWidth="20"/>
+      <line x1="10" y1="330" x2="290" y2="330" stroke="#312e81" strokeWidth="20"/>
+    </svg>
+  )
 
   function handlePageTransition(){
     if(clickable){
@@ -28,7 +38,7 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(
-      () => setImgPaths([frontPage1, frontPage2, frontPage3, frontPage4]),
+      () => setImgPaths(images),
     2500);
   }, [imgPaths]);
 
@@ -62,6 +72,14 @@ export default function Home() {
       <div className="grid grid-cols-2 md:grid-cols-[auto_auto_auto_auto] px-20 md:mt-10 gap-x-5 gap-y-5 place-items-center w-fit h-[250px] ">
         {
           imgPaths.map((v, index) => {
+            if(toggleAnimation){
+              return(
+                <div key={index} className="grid grid-cols-1 grid-rows-1 w-[120px] h-[150px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]">
+                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={images[index]} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
+                  {pictureFrame}
+                </div>
+              )
+            }
             return (
               <motion.div 
                 initial={{opacity: 0}}
@@ -75,12 +93,7 @@ export default function Home() {
                   :
                   <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
                 }
-                <svg className="col-start-1 row-start-1 w-full h-full" viewBox="0 0 300 500" preserveAspectRatio="none">
-                  <rect x="10" y="10" width="280" height="480" fill="none" stroke="#312e81" strokeWidth="20" rx="0"/>
-                  <line x1="150" y1="10" x2="150" y2="490" stroke="#312e81" strokeWidth="20"/>
-                  <line x1="10" y1="170" x2="290" y2="170" stroke="#312e81" strokeWidth="20"/>
-                  <line x1="10" y1="330" x2="290" y2="330" stroke="#312e81" strokeWidth="20"/>
-                </svg>
+                {pictureFrame}
               </motion.div>
             )
           })
