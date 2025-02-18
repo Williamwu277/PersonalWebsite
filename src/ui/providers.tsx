@@ -1,6 +1,6 @@
 'use client';
-import Navbar from "../components/navbar";
-import Footbar from "../components/footbar";
+import Navbar from "./navbar";
+import Footbar from "./footbar";
 import { createContext, useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";

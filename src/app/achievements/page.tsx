@@ -1,4 +1,4 @@
-import AchievementView from "../../components/achievementView";
+import AchievementView from "../../ui/achievementView";
 
 export default function Achievements() {
   return (
@@ -6,7 +6,7 @@ export default function Achievements() {
       <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
         <h1 className="text-4xl font-extrabold">Achievements</h1>
       </div>
-      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
       <div className="flex w-11/12">
         <p className="text-sm inline-block">
           Here is a list of achievements that I&apos;m particularly proud about!
@@ -14,7 +14,7 @@ export default function Achievements() {
           Click on an achievement for more information.
         </p>
       </div>
-      <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
 
       <AchievementView
         title="DeltaHacks"

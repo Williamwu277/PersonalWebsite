@@ -1,9 +1,13 @@
 'use client';
 import { motion } from "framer-motion";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { PageContext } from "../components/providers";
-import Image from "next/image";
+import { PageContext } from "../ui/providers";
+import frontPage1 from "../assets/frontPage1.jpg";
+import frontPage2 from "../assets/frontPage2.jpg";
+import frontPage3 from "../assets/frontPage3.jpg";
+import frontPage4 from "../assets/frontPage4.jpg";
+import Image, { StaticImageData } from "next/image";
 
 
 
@@ -11,6 +15,7 @@ export default function Home() {
   const words: Array<string> = ["Welcome", "to ", "My ", "World."]
   const router = useRouter();
   const [ clickable, setClickable ] = useState(false);
+  const [ imgPaths, setImgPaths ] = useState<null[] | StaticImageData[]>([null, null, null, null]);
   const { toggleAnimation, toggleHandler } = useContext(PageContext);
 
   function handlePageTransition(){
@@ -20,6 +25,12 @@ export default function Home() {
       setTimeout(() => router.push("/about"), 2250);
     }
   }
+
+  useEffect(() => {
+    setTimeout(
+      () => setImgPaths([frontPage1, frontPage2, frontPage3, frontPage4]),
+    2500);
+  }, [imgPaths]);
 
   return (
     <>
@@ -46,12 +57,36 @@ export default function Home() {
     )}
     <div 
       onClick={handlePageTransition}
-      className={"flex flex-col bg-indigo-900 w-full h-screen place-content-center font-[family-name:var(--font-geist-sans)] "+(clickable?"cursor-pointer":"")}
+      className={"flex flex-col gap-y-12 bg-indigo-900 w-full h-screen items-center place-content-center font-[family-name:var(--font-geist-sans)] "+(clickable?"cursor-pointer":"")}
     >
-      <div className="grid grid-cols-4 h-[350px]">
-
+      <div className="grid grid-cols-2 md:grid-cols-[auto_auto_auto_auto] px-20 md:mt-10 gap-x-5 gap-y-5 place-items-center w-fit h-[250px] ">
+        {
+          imgPaths.map((v, index) => {
+            return (
+              <motion.div 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 0.5, delay: (index+1)*0.5}}
+                key={index} className="grid grid-cols-1 grid-rows-1 w-[120px] h-[150px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]"
+              >
+                {
+                  v == null ? 
+                  <div className="object-cover col-start-1 row-start-1 w-11/12 h-11/12 mx-auto my-1 bg-indigo-200 rounded-t-[6rem]"/>
+                  :
+                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
+                }
+                <svg className="col-start-1 row-start-1 w-full h-full" viewBox="0 0 300 500" preserveAspectRatio="none">
+                  <rect x="10" y="10" width="280" height="480" fill="none" stroke="#312e81" strokeWidth="20" rx="0"/>
+                  <line x1="150" y1="10" x2="150" y2="490" stroke="#312e81" strokeWidth="20"/>
+                  <line x1="10" y1="170" x2="290" y2="170" stroke="#312e81" strokeWidth="20"/>
+                  <line x1="10" y1="330" x2="290" y2="330" stroke="#312e81" strokeWidth="20"/>
+                </svg>
+              </motion.div>
+            )
+          })
+        }
       </div>
-      <div className="flex flex-col w-full justify-center items-center">
+      <div className="flex flex-col w-full justify-center items-center mt-12 md:mt-0">
         <div className="flex flex-wrap w-fit h-full col-span-6 gap-x-3 lg:gap-x-6 justify-center">
           {
             words.map((word, index) => {
@@ -78,7 +113,7 @@ export default function Home() {
         </div>
         
         <Image 
-          className="w-[9rem] h-[3rem] md:w-[16rem] md:h-[5rem] pl-[2rem]"
+          className="w-[6rem] h-[2rem] md:w-[9rem] md:h-[3rem] mt-10 md:mt-0"
           src={"/portfolioName.png"}
           alt={"WilliamWu"}
           width={200}
@@ -89,3 +124,14 @@ export default function Home() {
     </>
   );
 }
+
+
+/*
+<motion.div 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 0.5 }}
+                  >
+                    <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
+                  </motion.div>
+                  */
