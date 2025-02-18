@@ -33,7 +33,7 @@ export default async function BlogPage({ params } :  { params: Promise<{ slug: s
         <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
             <h1 className="text-4xl font-extrabold">{renderedPage.title}</h1>
         </div>
-        <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+        <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
         <div className="grid grid-cols-1 md:grid-cols-[auto_100px] gap-5 w-11/12">
             <p className="text-sm">{renderedPage.desc}</p>
             <div className="flex md:justify-end">
@@ -42,7 +42,7 @@ export default async function BlogPage({ params } :  { params: Promise<{ slug: s
                 </p>
             </div>
         </div>
-        <hr className="w-full h-0.25 border-blue-300 mb-1"></hr>
+        <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
         {renderedPage.blog}
         </div>
     );
