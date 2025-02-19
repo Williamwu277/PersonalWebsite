@@ -17,7 +17,6 @@ export default function Home() {
   const router = useRouter();
   const [ clickable, setClickable ] = useState(false);
   const [ imgPaths, setImgPaths ] = useState<null[] | StaticImageData[]>([null, null, null, null]);
-  const [ animationComplete, setAnimationComplete ] = useState<null | boolean>(null);
   const { toggleAnimation, toggleHandler } = useContext(PageContext);
 
   const pictureFrame = (
@@ -41,7 +40,7 @@ export default function Home() {
     setTimeout(
       () => setImgPaths(images),
     2750);
-  }, []);
+  }, [images]);
 
   return (
     <>
