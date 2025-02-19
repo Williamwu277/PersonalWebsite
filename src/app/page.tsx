@@ -17,6 +17,7 @@ export default function Home() {
   const router = useRouter();
   const [ clickable, setClickable ] = useState(false);
   const [ imgPaths, setImgPaths ] = useState<null[] | StaticImageData[]>([null, null, null, null]);
+  const [ animationComplete, setAnimationComplete ] = useState<null | boolean>(null);
   const { toggleAnimation, toggleHandler } = useContext(PageContext);
 
   const pictureFrame = (
@@ -39,8 +40,8 @@ export default function Home() {
   useEffect(() => {
     setTimeout(
       () => setImgPaths(images),
-    2500);
-  }, [imgPaths]);
+    2750);
+  }, []);
 
   return (
     <>
@@ -67,7 +68,7 @@ export default function Home() {
     )}
     <div 
       onClick={handlePageTransition}
-      className={"flex flex-col gap-y-12 bg-indigo-900 w-full h-screen items-center place-content-center font-[family-name:var(--font-geist-sans)] "+(clickable?"cursor-pointer":"")}
+      className={"flex flex-col gap-y-12 bg-indigo-900 w-full h-[100dvh] items-center place-content-center font-[family-name:var(--font-geist-sans)] "+(clickable?"cursor-pointer":"")}
     >
       <div className="grid grid-cols-2 md:grid-cols-[auto_auto_auto_auto] px-20 md:mt-10 gap-x-5 gap-y-5 place-items-center w-fit h-[250px] ">
         {
