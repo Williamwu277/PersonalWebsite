@@ -29,6 +29,7 @@ export default function About() {
         alt="Photo"
         width={300}
         height={300}
+        loading="eager"
       ></Image>
     </div>
   );

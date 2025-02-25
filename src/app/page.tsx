@@ -75,7 +75,7 @@ export default function Home() {
             if(toggleAnimation){
               return(
                 <div key={index} className="grid grid-cols-1 grid-rows-1 w-[120px] h-[150px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]">
-                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={images[index]} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
+                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={images[index]} alt={"frontPage"+index} width={200} height={400} loading="eager" objectFit="contain"/>
                   {pictureFrame}
                 </div>
               )
