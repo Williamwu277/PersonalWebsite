@@ -91,7 +91,7 @@ export default function Home() {
                   v == null ? 
                   <div className="object-cover col-start-1 row-start-1 w-11/12 h-11/12 mx-auto my-1 bg-indigo-200 rounded-t-[6rem]"/>
                   :
-                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
+                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} loading="eager" objectFit="contain"/>
                 }
                 {pictureFrame}
               </motion.div>
