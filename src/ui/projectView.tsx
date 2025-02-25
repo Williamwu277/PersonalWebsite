@@ -15,6 +15,7 @@ export default function ProjectView( { name, desc, src, link, tags } : { name: s
                     alt={name}
                     width={200}
                     height={200}
+                    loading="eager"
                 />
                 <p className="text-xs w-full">{desc}</p>
             </div>
