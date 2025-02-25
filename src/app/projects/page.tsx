@@ -20,8 +20,8 @@ export default function Projects() {
       <div className="flex flex-col w-11/12">
         <p className="text-sm mb-3">
           Here is a collection of projects that I&apos;m particularly proud of. Feel free to explore!
-          You can find more on the <a href="https://github.com/Williamwu277" className="text-indigo-400 font-bold">Github</a>. 
-          As well, you can find many of my hackathon participations on <a href="https://github.com/andrewchu16/eyedentify/" className="text-indigo-400 font-bold">Devpost</a>
+          You can find more on the <a href="https://github.com/Williamwu277" target="_blank" className="text-indigo-400 font-bold">Github</a>. 
+          As well, you can find many of my hackathon participations on <a href="https://devpost.com/williamwu277" target="_blank" className="text-indigo-400 font-bold">Devpost</a>
         </p>
         <div className="grid grid-cols-1 md:grid-cols-[100px_auto] gap-y-2 mb-1">
           <p className="text-sm font-bold underline">Languages</p>
