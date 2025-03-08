@@ -12,8 +12,8 @@ export default function Navbar() {
 
 
   return (
-    <div className="z-20 absolute top-0 left-0 w-full font-[family-name:var(--font-geist-mono)]">
-        <div className="mt-5 flex gap-6 flex-wrap items-center justify-center text-sm">
+    <div className={`z-20 fixed top-0 left-0 w-full font-[family-name:var(--font-geist-mono)] ${pathname==="/"?"":"bg-black"}`}>
+        <div className="my-5 flex gap-6 flex-wrap items-center justify-center text-sm">
             <Link 
               onClick={(e) => {
                 if(pathname === "/"){
