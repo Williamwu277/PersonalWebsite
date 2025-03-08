@@ -137,14 +137,3 @@ export default function Home() {
     </>
   );
 }
-
-
-/*
-<motion.div 
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 0.5 }}
-                  >
-                    <Image className="object-cover col-start-1 row-start-1 mx-auto w-11/12 h-11/12 rounded-t-[6rem]" src={v} alt={"frontPage"+index} width={200} height={400} objectFit="contain"/>
-                  </motion.div>
-                  */

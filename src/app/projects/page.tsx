@@ -25,11 +25,11 @@ export default function Projects() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-[100px_auto] gap-y-2 mb-1">
           <p className="text-sm font-bold underline">Languages</p>
-          <TagGroup tags={["Python", "Java", "C++", "HTML", "Javascript", "Typescript", "CSS", "SQL", "R", "Racket"]}/>
+          <TagGroup tags={["Python", "Java", "C++", "HTML", "Javascript", "Typescript", "CSS", "SQL", "R", "Bash"]}/>
           <p className="text-sm font-bold underline">Frameworks</p>
-          <TagGroup tags={["Flask", "FastAPI", "React", "Next.js", "Streamlit"]}/>
+          <TagGroup tags={["Flask", "FastAPI", "React", "Next.js", "TailwindCSS", "Streamlit"]}/>
           <p className="text-sm font-bold underline">Technologies</p>
-          <TagGroup tags={["Git", "AWS", "PostgreSQL", "Pandas", "Matplotlib", "OpenAI"]}/>
+          <TagGroup tags={["Git", "AWS", "Linux", "PostgreSQL", "Pandas", "Matplotlib", "OpenAI", "Node.js"]}/>
         </div>
       </div>
       <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
