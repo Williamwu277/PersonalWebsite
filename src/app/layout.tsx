@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Monoton } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import Providers from "../ui/providers";
 import "./globals.css";
@@ -12,6 +12,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const monoton = Monoton({
+  weight: "400",
+  variable: "--font-monoton",
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} antialiased overflow-x-hidden`}
       >
         <Providers>
           {children}

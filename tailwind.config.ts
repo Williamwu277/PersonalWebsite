@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        title: ['var(--font-monoton)', 'sans-serif']
+      }
     },
   },
   plugins: [],
