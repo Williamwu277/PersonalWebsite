@@ -30,7 +30,7 @@ export default function AchievementView(
     }
 
     return (
-        <div onClick={showHandler} className={color + "grid grid-cols-auto md:grid-cols-[auto_100px_75px] gap-x-2 cursor-pointer max-w-xl w-full h-full border-2 rounded-lg py-1 px-3 on font-[family-name:var(--font-geist-mono)]"}>
+        <div onClick={showHandler} className={color + "grid grid-cols-auto md:grid-cols-[auto_100px_75px] gap-x-2 cursor-pointer max-w-xl w-full h-full border-2 rounded-lg py-1 px-3 font-clean"}>
             <p className="text-sm font-bold">{title}</p>
             <p className="text-sm">{achieve}</p>
             <div className="flex md:justify-end w-full">

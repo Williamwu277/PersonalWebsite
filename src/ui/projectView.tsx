@@ -3,7 +3,7 @@ import TagGroup from "./tagGroup";
 
 export default function ProjectView( { name, desc, src, link, tags } : { name: string, desc: string, src: StaticImageData, link: string, tags: Array<string> } ) {
     return (
-        <a href={link} target="_blank" className="flex flex-col items-center max-w-sm w-full h-full border-4 rounded-lg border-indigo-400 p-3 font-[family-name:var(--font-geist-mono)]">
+        <a href={link} target="_blank" className="flex flex-col items-center max-w-sm w-full h-full border-4 rounded-lg border-indigo-400 p-3 font-clean">
             <div className="w-11/12 mb-0.5">
                 <h1 className="">{name}</h1>
             </div>

@@ -29,8 +29,8 @@ export default async function BlogPage({ params } :  { params: Promise<{ slug: s
     }
 
     return (
-        <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20">
-        <div className="w-11/12 font-[family-name:var(--font-geist-mono)]">
+        <div className="my-16 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
+        <div className="w-11/12">
             <h1 className="text-4xl font-extrabold">{renderedPage.title}</h1>
         </div>
         <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>

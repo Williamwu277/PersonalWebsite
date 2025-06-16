@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        title: ['var(--font-monoton)', 'sans-serif']
+        title: ['var(--font-monoton)', 'sans-serif'],
+        clean: ['var(--font-inter)', 'sans-serif']
       }
     },
   },

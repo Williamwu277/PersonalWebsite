@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #000000;
+  --background: #0f172a;
   --foreground: #ededed;
 }
 
@@ -11,4 +11,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hover-grow {
+  @apply transform transition duration-300 ease-in-out hover:scale-105;
 }
