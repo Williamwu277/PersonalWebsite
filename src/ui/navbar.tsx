@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`z-20 flex justify-center fixed top-0 left-0 w-full font-clean ${pathname === "/" ? "" : "bg-slate-900 border-b-[1px] border-slate-600"}`}>
+    <div className={`z-20 flex justify-center fixed top-0 left-0 w-full font-clean ${pathname === "/" ? "" : "bg-slate-900 border-b-[1px] border-slate-400"}`}>
       <div className={`hover-grow flex shadow-md shadow-slate-600 w-fit py-3 px-6 border-white border-[1px] rounded-3xl my-5 gap-6 flex-wrap items-center justify-center text-sm
         ${disableNav ? " opacity-50 pointer-events-none " : "" }`
       }>
