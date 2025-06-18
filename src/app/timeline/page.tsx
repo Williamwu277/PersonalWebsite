@@ -3,19 +3,6 @@ import AchievementView from "../../ui/achievementView";
 export default function Timeline() {
   return (
     <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
-      <div className="w-11/12">
-        <h1 className="text-4xl font-extrabold">Achievements</h1>
-      </div>
-      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
-      <div className="flex w-11/12">
-        <p className="text-sm inline-block">
-          Here is a list of achievements that I&apos;m particularly proud about!
-          Achievements are sorted by date and a colour tier system from Gold to Bronze 🟨⬜🟫.
-          Click on an achievement for more information.
-        </p>
-      </div>
-      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
-
       <AchievementView
         title="DeltaHacks"
         achieve="2nd Place"

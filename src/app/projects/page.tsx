@@ -1,5 +1,5 @@
 import ProjectView from "../../ui/projectView";
-import TagGroup from "../../ui/tagGroup";
+import Emphasis from "../../ui/emphasis";
 import portfolioAdmissed from "../../assets/portfolioAdmissed.jpg";
 import portfolioAAC from "../../assets/portfolioAAC.jpg";
 import portfolioCowsVsDucks from "../../assets/portfolioCowsVsDucks.jpg";
@@ -9,87 +9,107 @@ import portfolioLayoffEvaders from "../../assets/portfolioLayoffEvaders.jpg";
 import portfolioLemonAid from "../../assets/portfolioLemonAid.jpg";
 import portfolioPicture from "../../assets/portfolioPicture.jpg";
 
+const projects = [
+  {
+    name: "AdmissEd",
+    desc: "A full-stack web app for analyzing and visualizing admission statistics. Upload online CSV data to filter and instantly generate a detailed report for each school or program.",
+    src: portfolioAdmissed,
+    github: "https://github.com/Williamwu277/Admissed", 
+    links: ["https://admissed.com"],
+    announcements: ["Deployed"],
+    tags: ["Python", "React", "AWS", "Pandas", "Matplotlib", "FastAPI"],
+  },
+  {
+    name: "Layoff Evaders Dashboard",
+    desc: "A real-time analytics dashboard featuring interactive graphs and a chatbot, designed to complement Layoff Evaders—a VR game where players perform physical exercises to control their character in a Subway Surfer–style experience.",
+    src: portfolioLayoffEvaders,
+    github: "https://github.com/martin226/layoffevaders",
+    links: ["https://devpost.com/software/layoff-evaders"],
+    announcements: ["2nd Place"],
+    tags: ["Python", "Cohere", "Streamlit", "Pandas", "Firebase"],
+  },
+  {
+    name: "Portfolio Website",
+    desc: "A sleek, modern portfolio website designed and built from the ground up. Showcases projects, achievements and a personal brand through smooth animations and responsive design.",
+    src: portfolioPicture,
+    github: "https://github.com/Williamwu277/PersonalWebsite",
+    links: ["https://www.williamwu277.ca"],
+    announcements: [],
+    tags: ["Next JS", "React", "Tailwind CSS", "Typescript", "Framer Motion"],
+  },
+  {
+    name: "DMOJ Contests",
+    desc: "Organized 9 competitive programming contests on the DMOJ platform, authoring 12 original problems designed to challenge users' algorithmic thinking (Cover art is also mine).",
+    src: portfolioAAC,
+    github: "https://github.com/Williamwu277/Competitive-Programming",
+    links: [
+      "https://dmoj.ca/user/williamwu277",
+      "https://dmoj.ca/contest/aac7"
+    ],
+    announcements: ["1500+ Competitors", "13000+ Attempts"],
+    tags: ["Python", "Java", "C++", "YAML", "LaTeX"],
+  },
+  {
+    name: "Eyedentify",
+    desc: "A web app that streamlines classroom attendance by leveraging facial recognition technology. Includes built-in capabilities to automatically manage attendance data for teachers.",
+    src: portfolioEyedentify,
+    github: "https://github.com/andrewchu16/eyedentify",
+    links: ["https://devpost.com/software/eyedentify-f9358o"],
+    announcements: ["2nd Place", "Best Web App"],
+    tags: ["Python", "Flask", "Face Recognition"],
+  },
+  {
+    name: "Friend Bot",
+    desc: "A Discord chatbot powered by the Cohere LLM—designed to keep you company and ensure that you're never alone.",
+    src: portfolioFriendbot,
+    github: "https://github.com/andrewchu16/friend-bot",
+    links: ["https://devpost.com/software/friend-bot-2vnapw"],
+    announcements: ["Best API Usage"],
+    tags: ["Python", "Cohere", "Discord"],
+  },
+  {
+    name: "LemonAid",
+    desc: "An intelligent, time-efficient pantry web app that uses AI to scan your groceries and instantly generate tailored recipes based on the ingredients you have on hand.",
+    src: portfolioLemonAid,
+    github: "https://github.com/1spyral/LemonAid",
+    links: ["https://devpost.com/software/lemonaid-3pz74j"],
+    announcements: [],
+    tags: ["Python", "OpenAI", "Flask", "JSON", "DALL-E", "GPT-4"],
+  },
+  {
+    name: "Cows-vs-Ducks",
+    desc: "A Plants vs. Zombies–inspired strategy game where cows defend their lawn against invading ducks! Features dynamic animations and diverse gameplay mechanics.",
+    src: portfolioCowsVsDucks,
+    github: "https://github.com/rhhscs/cows-vs-ducks",
+    links: [],
+    announcements: [],
+    tags: ["Java", "Java Swing", "OOP"],
+  },
+];
 
 export default function Projects() {
   return (
-    <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-3xl w-4/5 mb-20 font-clean">
-      <div className="w-11/12">
-        <h1 className="text-4xl font-extrabold">Projects</h1>
-      </div>
-      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
-      <div className="flex flex-col w-11/12">
-        <p className="text-sm mb-3">
-          Here is a collection of projects that I&apos;m particularly proud of. Feel free to explore!
-          You can find more on the <a href="https://github.com/Williamwu277" target="_blank" className="text-indigo-400 font-bold">Github</a>. 
-          As well, you can find many of my hackathon participations on <a href="https://devpost.com/williamwu277" target="_blank" className="text-indigo-400 font-bold">Devpost</a>
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-[100px_auto] gap-y-2 mb-1">
-          <p className="text-sm font-bold underline">Languages</p>
-          <TagGroup tags={["Python", "Java", "C++", "HTML", "Javascript", "Typescript", "CSS", "SQL", "R", "Bash"]}/>
-          <p className="text-sm font-bold underline">Frameworks</p>
-          <TagGroup tags={["Flask", "FastAPI", "React", "Next.js", "TailwindCSS", "Streamlit"]}/>
-          <p className="text-sm font-bold underline">Technologies</p>
-          <TagGroup tags={["Git", "AWS", "Linux", "PostgreSQL", "Pandas", "Matplotlib", "OpenAI", "Node.js"]}/>
+    <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
+      <div className="grid grid-cols-1 gap-5 w-full grid-rows-[auto] place-items-center mb-4">
+        {
+          projects.map((v, index) => {
+            return (
+              <ProjectView
+                key={index}
+                name={v.name}
+                desc={v.desc}
+                src={v.src}
+                github={v.github}
+                links={v.links}
+                announcements={v.announcements}
+                tags={v.tags}
+              />
+            );
+          })
+        }
+        <div className="flex justify-center items-center max-w-xl w-full p-5 border-[1pt] border-slate-400 border-dashed font-clean">
+          <p>See my other projects on <Emphasis href="https://github.com/Williamwu277">GitHub</Emphasis> or <Emphasis href="https://devpost.com/williamwu277">Devpost</Emphasis></p>
         </div>
-      </div>
-      <hr className="w-full h-0.25 border-indigo-400 mb-1"></hr>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full grid-rows-[auto] place-items-center">
-        <ProjectView 
-          name="AdmissEd"
-          desc="A full-stack web app for admission statistic analysis and visualization. Upload your data in CSV format to generate a report. See it live at https://admissed.com"
-          src={portfolioAdmissed}
-          link="https://admissed.com" 
-          tags={["React", "CSS", "AWS", "Pandas", "Matplotlib", "FastAPI"]}
-        />
-        <ProjectView 
-          name="Layoff Evaders Dashboard"
-          desc="A comprehensive dashboard with real-time data, graphs and a chat bot to supplement the VR Layoff Evaders exercising game. Won 2nd @ DeltaHacks"
-          src={portfolioLayoffEvaders}
-          link="https://github.com/martin226/layoffevaders" 
-          tags={["Streamlit", "Python", "Cohere", "Pandas", "DeltaHacks"]}
-        />
-        <ProjectView 
-          name="Portfolio Website"
-          desc="My portolio website! Made with lots of love and care. Includes animations, about, projects, achievements and blog functionality"
-          src={portfolioPicture}
-          link="https://github.com/Williamwu277/PersonalWebsite" 
-          tags={["Next.js", "React", "Tailwind", "HTML", "Typescript"]}
-        />
-        <ProjectView 
-          name="DMOJ Contest Organizing"
-          desc="Organized 9 competitive programming contests on the DMOJ platform, with 1500+ participants combined. My problems have received 13000+ solve attempts"
-          src={portfolioAAC}
-          link="https://dmoj.ca/user/williamwu277" 
-          tags={["Python", "Java", "C++", "YAML", "Problem Solving", "Blackbox Testing"]}
-        />
-        <ProjectView 
-          name="Eyedentify"
-          desc="A web app to take class attendance using facial recognition. Built using Flask and the face recognition library. Won 2nd and Best Web App @ YrHacks"
-          src={portfolioEyedentify}
-          link="https://github.com/andrewchu16/eyedentify" 
-          tags={["Python", "Flask", "Face Recognition", "YrHacks"]}
-        />
-        <ProjectView 
-          name="Friend Bot"
-          desc="A discord chat bot so you never have to be alone again! Built using the discord.py python library and Cohere. Won Best API Usage @ YrHacks 2022"
-          src={portfolioFriendbot}
-          link="https://github.com/andrewchu16/friend-bot" 
-          tags={["Python", "Cohere", "discord.py", "YrHacks"]}
-        />
-        <ProjectView 
-          name="LemonAid"
-          desc="A user-time-efficient pantry web app leveraging OpenAI's APIs to scan groceries and generate recipes given pantry contents"
-          src={portfolioLemonAid}
-          link="https://github.com/1spyral/LemonAid" 
-          tags={["Python", "OpenAI", "Flask", "JSON", "DALL-E", "GPT-4", "IgnitionHacks"]}
-        />
-        <ProjectView 
-          name="Cows-vs-Ducks"
-          desc="A Plants vs. Zombies-like strategy game where cows aim to defend their lawn against the invading ducks! Includes animations and various game mechanics"
-          src={portfolioCowsVsDucks}
-          link="https://github.com/rhhscs/cows-vs-ducks" 
-          tags={["Java", "Game-Dev", "OOP", "State-machine", "Animation"]}
-        />
       </div>
     </div>
   );
