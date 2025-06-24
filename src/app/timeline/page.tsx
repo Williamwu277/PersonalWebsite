@@ -1,8 +1,28 @@
 import AchievementView from "../../ui/achievementView";
+import YearView from "../../ui/yearView";
 
 export default function Timeline() {
+
+  const data = [
+    {
+      year: '2025',
+      achievements: [
+        'Graduated from university',
+        'Started first job',
+        'Won hackathon',
+      ],
+    },
+    {
+      year: '2024',
+      achievements: [
+        'Internship at Company X',
+        'Published research paper',
+      ],
+    },
+  ];
+
   return (
-    <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
+    <div className="my-28 mx-auto flex flex-col gap-3 max-w-xl w-4/5 mb-20 font-clean">
       <AchievementView
         title="DeltaHacks"
         achieve="2nd Place"
@@ -27,7 +47,7 @@ export default function Timeline() {
         description="Awarded to students admitted to the University of Waterloo with an average of 95%+ (~99.0% Top 6)"
         date="Apr 2024"
         link="https://uwaterloo.ca/undergraduate-entrance-awards/awards/mathematics-national-scholarships"
-        importance="Bronze"
+        importance="Silver"
       />
 
       <AchievementView
@@ -57,15 +77,6 @@ export default function Timeline() {
         importance="Silver"
       />
 
-      <AchievementView
-        title="CEMC Hypatia Math Contest"
-        achieve="Honour Roll"
-        description="Achieved Group IV (top 5%) on the honour roll with a score of 34/40"
-        date="Apr 2023"
-        link="https://cemc.uwaterloo.ca/resources/past-contests?grade=All&academic_year=All&contest_category=25"
-        importance="Bronze"
-      />
-
       <AchievementView 
         title="YrHacks" 
         achieve="2nd Place" 
@@ -90,16 +101,7 @@ export default function Timeline() {
         description="Reached the highest division of the USA Computing Olympiad" 
         date="Dec 2022" 
         link="https://usaco.org/current/data/dec22_gold_results.html" 
-        importance="Silver"
-      />
-
-      <AchievementView 
-        title="DMOJ" 
-        achieve="1991 Rating" 
-        description="Reached a peak rating of 1991 (Master) on DMOJ: Modern Online Judge" 
-        date="Oct 2022" 
-        link="https://dmoj.ca/user/williamwu277" 
-        importance="Bronze"
+        importance="Gold"
       />
 
       <AchievementView 
@@ -112,15 +114,6 @@ export default function Timeline() {
       />
 
       <AchievementView
-        title="CEMC Galois Math Contest"
-        achieve="Honour Roll"
-        description="Achieved Group II (top 5%) on the honour roll as well as school-champion with a score of 36/40"
-        date="Apr 2022"
-        link="https://cemc.uwaterloo.ca/resources/past-contests?grade=All&academic_year=All&contest_category=25"
-        importance="Bronze"
-      />
-
-      <AchievementView
         title="Canadian Computing Competition"
         achieve="Honour Roll"
         description="Achieved a placement of 75/3262 with a score of 48/75 on CCC Senior 2022"
@@ -129,16 +122,6 @@ export default function Timeline() {
         importance="Silver"
       />
 
-      <AchievementView
-        title="Breakout Scratch Game"
-        achieve="4700+ Plays"
-        description="One of my earliest Scratch games, introducing me to the joy of CS"
-        date="Mar 2017"
-        link="https://scratch.mit.edu/projects/151783114/"
-        importance="Bronze"
-      />
-
     </div>
   );
 }
-

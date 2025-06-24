@@ -15,11 +15,8 @@ type ProjectViewProps = {
 export default function ProjectView({ name, desc, src, github, links, announcements, tags }: ProjectViewProps) {
   return (
     <div className="flex flex-col items-center max-w-xl w-full border-[1pt] border-white shadow-white shadow-sm font-clean hover-grow">
-      <div className="flex flex-row bg-slate-900 justify-between w-full px-3 py-1">
-        <div className="flex gap-2">
-          <h1 className="font-black">{name}</h1>
-          <TagGroup tags={announcements} invertStyle={true} />
-        </div>
+      <div className="flex flex-row bg-slate-950 justify-between w-full px-3 py-1">
+        <h1 className="font-black">{name}</h1>
         <div className="flex gap-2">
           <a href={github} target="_blank"><Github className="hover-grow"/></a>
           {
@@ -42,8 +39,8 @@ export default function ProjectView({ name, desc, src, github, links, announceme
       <div className="grid gap-4 w-full px-3 mb-1">
         <p className="text-xs w-full">{desc}</p>
       </div>
-      <div className="pt-1 px-3 pb-3 w-full">
-        <TagGroup tags={tags} />
+      <div className="flex flex-row pt-1 gap-1 px-3 pb-3 w-full">
+        <TagGroup important={announcements} tags={tags} />
       </div>
     </div>
   );

@@ -16,3 +16,11 @@ body {
 .hover-grow {
   @apply transform transition duration-300 ease-in-out hover:scale-105;
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

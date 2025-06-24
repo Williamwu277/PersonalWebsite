@@ -40,7 +40,7 @@ export default function Providers({
     return (
         <>
             <PageContext.Provider value={{toggleAnimation, toggleHandler, disableNav, toggleDisableNav}}>
-                <Navbar/>
+                <Navbar />
                 {
                     toggleAnimation && pathname !== "/" ? 
                     <motion.div 
