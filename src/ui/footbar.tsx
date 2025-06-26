@@ -16,16 +16,16 @@ export default function Footbar() {
           <Github />
         </a>
         {/* CS Webring */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <a href='https://cs.uwatering.com/#williamwu277.ca?nav=prev'>←</a>
-          <a href='https://cs.uwatering.com/#williamwu277.ca' target='_blank'>
+        <div className="flex items-center gap-2">
+          <a className="hover-grow text-xl" href='https://cs.uwatering.com/#williamwu277.ca?nav=prev'>←</a>
+          <a className="hover-grow" href='https://cs.uwatering.com/#williamwu277.ca' target='_blank'>
             <img
               src='https://cs.uwatering.com/icon.white.svg'
               alt='CS Webring'
-              style={{ width: '24px', height: 'auto', opacity: 0.8 }}
+              className="w-8 h-auto"
             />
           </a>
-          <a href='https://cs.uwatering.com/#williamwu277.ca?nav=next'>→</a>
+          <a className="hover-grow text-xl" href='https://cs.uwatering.com/#williamwu277.ca?nav=next'>→</a>
         </div>
         <a className="hover-grow" href="/ResumeWilliam.pdf" target="_blank">
           <FileUser />

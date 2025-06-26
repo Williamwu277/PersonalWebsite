@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* page transition animation */}
       {toggleAnimation && (
         <motion.div
@@ -40,7 +40,7 @@ export default function Home() {
           animate={{ x: "-80vw" }}
         >
           <svg
-            className="absolute z-50 w-[180vw] h-screen"
+            className="absolute z-50 w-[180vw] h-[100dvh]"
             viewBox="0 0 1000 600"
             preserveAspectRatio="none"
           >
@@ -83,9 +83,9 @@ export default function Home() {
             })
           }
         </div>
-        <div className="flex flex-col w-full justify-center items-center gap-y-3 mt-12 md:mt-0">
+        <div className="flex flex-col w-full justify-center items-center gap-y-3 mt-16 md:mt-0">
           {/* Animate the welcome message */}
-          <div className="flex flex-wrap w-fit h-full col-span-6 gap-x-3 lg:gap-x-6 justify-center">
+          <div className="flex flex-wrap w-fit h-full col-span-6 mx-12 gap-x-3 lg:gap-x-6 justify-center">
             {
               words.map((word, index) => {
                 return (
@@ -99,7 +99,7 @@ export default function Home() {
                         if (index == 3) setClickable(true);
                       }
                     }
-                    className={(index == 3 ? "text-blue-300 " : "") + "text-6xl lg:text-5xl font-title"}
+                    className={(index == 3 ? "text-blue-300 " : "") + "text-4xl lg:text-5xl font-title"}
                   >
                     {word}
                   </motion.h1>
@@ -108,7 +108,7 @@ export default function Home() {
             }
           </div>
           {/* Animate the name using motion paths */}
-          <div className="flex justify-center w-full max-w-md md:max-w-sm mt-10 md:mt-0">
+          <div className="flex justify-center w-full max-w-[18rem] md:max-w-sm mt-8 md:mt-0">
             {
               name.map((char, index) => {
                 if (char === " ") {
@@ -137,6 +137,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
