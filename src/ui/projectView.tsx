@@ -29,7 +29,7 @@ export default function ProjectView({ name, desc, src, github, links, announceme
         </div>
       </div>
       <Image
-        className="border-y-[1px] border-white h-[10rem] object-cover mb-2"
+        className="border-y-[1px] border-white h-[12rem] object-cover mb-2"
         src={src}
         alt={name}
         width={600}

@@ -17,7 +17,7 @@ export default function About() {
         Moreover, by building personal web applications and participating in a multitude of hackathons, I&apos;ve become proficient in various full-stack technologies.
         <br></br><br></br>
         At this moment, I&apos;m exploring AI and seeking further opportunities to apply my problem-solving skills to the real-world.
-        Feel free to reach out with the contact details on my <Emphasis href="/ResumeWilliamE.pdf">Resume!</Emphasis>
+        Feel free to reach out with the contact details on my <Emphasis href="/ResumeWilliam.pdf">Resume!</Emphasis>
       </p>
       <hr className="w-full h-0.25 border-slate-400 mb-1"></hr>
       <Image 

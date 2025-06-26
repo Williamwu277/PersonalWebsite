@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from "next/navigation";
-import { FileUser, Github, Linkedin } from "lucide-react";
+import { FileUser, Github, Linkedin, CodeXml } from "lucide-react";
 
 export default function Footbar() {
   const pathname = usePathname();
@@ -9,14 +9,29 @@ export default function Footbar() {
     <div className={(pathname === "/" ? "" : "bg-slate-900 border-t-[1px] border-slate-400 ") + " z-30 fixed bottom-0 left-0 w-full pt-5 font-[family-name:var(--font-geist-mono)]"}>
       {/* Footbar links */}
       <div className="mb-3 flex gap-6 flex-wrap items-center justify-center text-xs">
-        <a className="text-sm hover-grow" href="https://www.linkedin.com/in/williamwu277/" target="_blank">
+        <a className="hover-grow" href="https://www.linkedin.com/in/williamwu277/" target="_blank">
           <Linkedin />
         </a>
-        <a className="text-sm hover-grow" href="https://github.com/Williamwu277" target="_blank">
+        <a className="hover-grow" href="https://github.com/Williamwu277" target="_blank">
           <Github />
         </a>
-        <a className="text-sm hover-grow" href="/ResumeWilliamE.pdf" target="_blank">
+        {/* CS Webring */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <a href='https://cs.uwatering.com/#williamwu277.ca?nav=prev'>←</a>
+          <a href='https://cs.uwatering.com/#williamwu277.ca' target='_blank'>
+            <img
+              src='https://cs.uwatering.com/icon.white.svg'
+              alt='CS Webring'
+              style={{ width: '24px', height: 'auto', opacity: 0.8 }}
+            />
+          </a>
+          <a href='https://cs.uwatering.com/#williamwu277.ca?nav=next'>→</a>
+        </div>
+        <a className="hover-grow" href="/ResumeWilliam.pdf" target="_blank">
           <FileUser />
+        </a>
+        <a className="hover-grow" href="https://github.com/Williamwu277/PersonalWebsite" target="_blank">
+          <CodeXml />
         </a>
       </div>
       {/* Copyright */}

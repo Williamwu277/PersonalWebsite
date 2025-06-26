@@ -8,6 +8,7 @@ export const index: Array<{
     date: string,
     image: StaticImageData,
 }> = [
+    /*
     {
         url: "blog1",
         title: "New Years Resolution Reflection",
@@ -19,5 +20,6 @@ export const index: Array<{
         title: "New Years Resolution Reflection",
         date: "2 Feb 2025",
         image: d
-    },
+    }
+    */
 ]

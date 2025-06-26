@@ -3,6 +3,7 @@ import path from 'path'
 import ReactMarkdown from 'react-markdown';
 import { notFound } from "next/navigation";
 import { index } from "../../../blog";
+import { StaticImageData } from "next/image";
 
 function getPostContent(slug: string){
   const filePath = path.join(process.cwd(), 'src/blog', `${slug}.md`);
@@ -16,9 +17,8 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
   const pages: Array<{
     url: string,
     title: string,
-    desc: string,
     date: string,
-    tags: Array<string>,
+    image: StaticImageData,
   }> = index;
 
   const exists: boolean = pages.some(page => page.url === slug);
