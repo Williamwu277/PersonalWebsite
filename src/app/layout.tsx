@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Monoton, Inter } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import Providers from "../ui/providers";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const monoton = Monoton({
+  weight: "400",
+  variable: "--font-monoton",
+  subsets: ["latin"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+  weight: "400",
+  variable: "--font-inter",
+  subsets: ["latin"]
 });
+
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "William's Portfolio",
+  title: "William Wu",
+  description: "William Wu is a Computer Science student at the University of Waterloo. Explore his about page, software projects, achievement timeline, and blog posts on tech and personal growth.",
 };
 
 export default function RootLayout({
@@ -33,7 +36,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${monoton.variable} ${inter.variable} antialiased overflow-x-hidden`}
       >
         <Providers>
           {children}
