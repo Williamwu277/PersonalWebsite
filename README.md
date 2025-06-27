@@ -2,7 +2,7 @@
 
 This is the repo for my personal portfolio, which I designed and built from scratch. It's been through three major 'versions' now—V3 hopefully being the last.
 
-![Preview](https://raw.githubusercontent.com/williamwu277/personalwebsite/main/src/assets/portfoliopicture.jpg)
+![Preview](https://raw.githubusercontent.com/Williamwu277/PersonalWebsite/main/src/assets/portfolioPicture.jpg)
 
 ### Getting Started
 
