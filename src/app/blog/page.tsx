@@ -1,6 +1,11 @@
 import BlogView from "../../ui/blogView";
 import { index } from "../../blog";
 import { StaticImageData } from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog"
+};
 
 export default function Blog() {
 

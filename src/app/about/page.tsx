@@ -1,8 +1,11 @@
-'use client';
+import type { Metadata } from "next";
 import Image from "next/image";
 import Emphasis from "../../ui/emphasis";
 import profileImage from "../../assets/portfolioImage.jpg";
 
+export const metadata: Metadata = {
+  title: "About Me"
+};
 
 export default function About() {
   return (

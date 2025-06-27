@@ -3,6 +3,11 @@ import { StaticImageData } from "next/image";
 import JobView from "../../ui/jobView";
 import leapAPLogo from "../../assets/logos/leapAPlogo.jpg";
 import watonomousLogo from "../../assets/logos/watonomousLogo.jpg";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Timeline"
+};
 
 type Job = {
   desc: string;

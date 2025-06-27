@@ -18,8 +18,8 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "William's Portfolio",
+  title: "William Wu",
+  description: "William Wu is a Computer Science student at the University of Waterloo. Explore his about page, software projects, achievement timeline, and blog posts on tech and personal growth.",
 };
 
 export default function RootLayout({

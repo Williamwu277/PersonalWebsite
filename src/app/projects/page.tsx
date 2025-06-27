@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ProjectView from "../../ui/projectView";
 import Emphasis from "../../ui/emphasis";
 import portfolioAdmissed from "../../assets/portfolioAdmissed.jpg";
@@ -8,6 +9,10 @@ import portfolioFriendbot from "../../assets/portfolioFriendbot.jpg";
 import portfolioLayoffEvaders from "../../assets/portfolioLayoffEvaders.jpg";
 import portfolioLemonAid from "../../assets/portfolioLemonAid.jpg";
 import portfolioPicture from "../../assets/portfolioPicture.jpg";
+
+export const metadata: Metadata = {
+  title: "Projects"
+};
 
 const projects = [
   {
