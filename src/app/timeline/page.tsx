@@ -1,7 +1,7 @@
 import AchievementView from "../../ui/achievementView";
 import { StaticImageData } from "next/image";
 import JobView from "../../ui/jobView";
-import leapAPLogo from "../../assets/logos/leapAPlogo.jpg";
+import leapAPLogo from "../../assets/logos/leapAPLogo.jpg";
 import watonomousLogo from "../../assets/logos/watonomousLogo.jpg";
 import type { Metadata } from "next";
 
