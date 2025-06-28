@@ -14,8 +14,8 @@ type ProjectViewProps = {
 
 export default function ProjectView({ name, desc, src, github, links, announcements, tags }: ProjectViewProps) {
   return (
-    <div className="flex flex-col items-center max-w-xl w-full border-2 border-white shadow-white shadow-sm font-clean hover-grow">
-      <div className="flex flex-row bg-slate-950 justify-between w-full px-3 py-1">
+    <div className="flex flex-col items-center max-w-xl w-full font-clean hover-grow border-white border-2">
+      <div className="bg-slate-950 flex flex-row justify-between w-full px-3 py-1">
         <h1 className="font-black">{name}</h1>
         <div className="flex gap-2">
           <a href={github} target="_blank"><Github className="hover-grow"/></a>
