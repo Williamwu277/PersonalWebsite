@@ -70,7 +70,7 @@ export default function Home() {
                   key={index} className="grid grid-cols-1 grid-rows-1 justify-center items-center w-[120px] h-[150px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]"
                 >
                   {/* Image */}
-                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-[90%]" src={v} alt={"frontPage" + index} width={200} height={400} loading="eager" objectFit="contain" />
+                  <Image className="object-cover col-start-1 row-start-1 mx-auto w-[90%]" src={v} alt={"frontPage" + index} width={200} height={400} placeholder="blur" priority/>
                   {/* Picture frame #312e81 */}
                   <svg className="col-start-1 row-start-1 w-full h-full" viewBox="0 0 300 500" preserveAspectRatio="none">
                     <rect x="10" y="10" width="280" height="480" fill="none" stroke="white" strokeWidth="10" rx="0" />

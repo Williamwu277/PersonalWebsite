@@ -36,7 +36,7 @@ export default function BlogView({ url, title, date, image }: BlogViewProps) {
         width={600}
         height={200}
         loading="eager"
-      ></Image>
+      />
       <div className="flex w-full justify-between border-white bg-slate-950 p-3">
         <p className="font-bold text-sm">{title}</p>
         <p className="text-sm">{date}</p>

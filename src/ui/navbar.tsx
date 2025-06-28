@@ -28,7 +28,7 @@ export default function Navbar() {
           onClick={() => {
             if (pathname !== "/") {
               toggleDisableNav(true);
-              setTimeout(() => toggleDisableNav(false), 3000);
+              setTimeout(() => toggleDisableNav(false), 3500);
             }
           }}
         >
