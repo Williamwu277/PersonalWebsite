@@ -14,7 +14,7 @@ export default function JobView({
 
   return (
     <a href={url} target="_blank" className="w-full">
-      <div className="grid grid-cols-[85px_5fr_2fr] gap-2 w-full items-center place-items-center bg-slate-900 border-white border-[1px] rounded-lg hover-grow">
+      <div className="grid grid-cols-[85px_2fr_1fr] gap-2 w-full items-center place-items-center bg-slate-900 border-white border-[1px] rounded-lg hover-grow">
         <Image 
           className="rounded-tl-lg rounded-bl-lg"
           src={src}
@@ -23,7 +23,9 @@ export default function JobView({
           height={200}
           loading="eager"
         ></Image>
-        <p className="font-bold text-sm ml-2">{desc}</p>
+        <div className="w-full">
+            <p className="font-bold text-sm ml-2">{desc}</p>
+        </div>
         <p className="text-xs mr-4">{dates}</p>
       </div>
     </a>
