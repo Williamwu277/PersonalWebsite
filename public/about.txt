@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Jaldi
+- Font Title: Lexend
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/jaldi/v13/or3sQ67z0_CI30NUZpD_B6g8.ttf
+- Font Source: https://fonts.gstatic.com/s/lexend/v25/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LBte6KuGEo.ttf
 - Font License: undefined

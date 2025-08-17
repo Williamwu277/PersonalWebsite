@@ -1,9 +1,9 @@
-export default function Emphasis( { children, href } : { children: string, href: string } ) {
+export default function Emphasis( { children, href, currentTab } : { children: string, href: string, currentTab?: string } ) {
     return (
         <a 
-            className="inline-block hover-grow text-sky-200 font-black underline underline-offset-4"
+            className="inline-block hover-grow emphasis"
             href={href}
-            target="_blank"
+            target={currentTab ? "_self" : "_blank"}
         >
             {children}
         </a>

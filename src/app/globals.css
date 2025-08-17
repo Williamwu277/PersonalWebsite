@@ -24,3 +24,7 @@ body {
     display: none;
   }
 }
+
+.emphasis {
+  @apply text-sky-200 font-black underline underline-offset-4;
+}
