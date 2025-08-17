@@ -18,8 +18,8 @@ export default function About() {
                 Lately, I&apos;ve been delving into the world of autonomous software as part of the Rover team in <Emphasis href="https://www.watonomous.ca">Watonomous</Emphasis>.
                 I&apos;m also currently developing an EdTech project to accelerate the learning process.
                 <br></br><br></br>
-                Previously, I was an avid competitive programmer. I've organized 9 programming contests on <Emphasis href="https://dmoj.ca">DMOJ</Emphasis> and achieved certain milestones such as Platinum on the USACO.
-                I've also participated in 15+ hackathons, with 3 wins at hackathons such as DeltaHacks and YrHacks. You can take a look at
+                Previously, I was an avid competitive programmer. I&apos;ve organized 9 programming contests on <Emphasis href="https://dmoj.ca">DMOJ</Emphasis> and achieved certain milestones such as Platinum on the USACO.
+                I&apos;ve also participated in 15+ hackathons, with 3 wins at hackathons such as DeltaHacks and YrHacks. You can take a look at
                 my <Link href="/projects" className="inline-block hover-grow emphasis">projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">resume</Emphasis> for more details.
                 <br></br><br></br>
                 In the future, I plan to explore topics such as AI applications, finance, and backend technologies. I&apos;m seeking opportunities to apply my problem-solving skills to real-world challenges, so feel free to reach out!
