@@ -11,7 +11,7 @@ export const index: Array<{
     {
         url: "blog1",
         title: "End of Year One Reflection",
-        date: "15 Aug 2025",
+        date: "16 Aug 2025",
         image: blog1,
         blogImages: {
             "blog1": blog1
