@@ -29,13 +29,13 @@ type Achievement = {
 const jobData: Job[] = [
     {
         desc: "LeapAP Software Developer Co-op",
-        dates: "May 2025 - Present",
+        dates: "May 2025 - Aug 2025",
         src: leapAPLogo,
         url: "https://www.leapap.com"
     },
     {
         desc: "WATonomous Autonomy Developer",
-        dates: "Jan 2025 - Present",
+        dates: "Feb 2025 - Present",
         src: watonomousLogo,
         url: "https://www.watonomous.ca"
     },
