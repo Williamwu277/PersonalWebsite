@@ -11,18 +11,36 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
-
             <p className="w-11/12 text-sm mb-1">
-                I&apos;m currently a 2nd year CS student at <Emphasis href="https://uwaterloo.ca">UWaterloo</Emphasis> and
-                Software Engineer Co-op at <Emphasis href="https://www.leapap.com">LeapAP</Emphasis>, where I work on web-scrapers.
-                Lately, I&apos;ve been delving into the world of autonomous software as part of the Rover team in <Emphasis href="https://www.watonomous.ca">Watonomous</Emphasis>.
-                I&apos;m also currently developing an EdTech project to accelerate the learning process.
-                <br></br><br></br>
-                Previously, I was an avid competitive programmer. I&apos;ve organized 9 programming contests on <Emphasis href="https://dmoj.ca">DMOJ</Emphasis> and achieved certain milestones such as Platinum on the USACO.
-                I&apos;ve also participated in 15+ hackathons, with 3 wins at hackathons such as DeltaHacks and YrHacks. You can take a look at
-                my <Link href="/projects" className="inline-block hover-grow emphasis">projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">resume</Emphasis> for more details.
-                <br></br><br></br>
-                In the future, I plan to explore topics such as AI applications, finance, and backend technologies. I&apos;m seeking opportunities to apply my problem-solving skills to real-world challenges, so feel free to reach out!
+                Hi there! I&apos;m William, and this is a short summary of what I&apos;ve been up to:
+                <ul className="list-disc w-11/12 text-sm mb-2 mt-3 ml-8 space-y-1">
+                    <li>
+                        Second year studying Computer Science at <Emphasis href="https://uwaterloo.ca">U of Waterloo</Emphasis>
+                    </li>
+                    <li>
+                        Co-Director of the autonomous Rover Team in <Emphasis href="https://www.watonomous.ca">Watonomous</Emphasis>
+                    </li>
+                </ul>
+                Previously,
+                <ul className="list-disc w-11/12 text-sm mb-2 mt-3 ml-8 space-y-1">
+                    <li>
+                        Software Engineering at <Emphasis href="https://www.leapap.com">LeapAP</Emphasis>, where I worked on web-scrapers
+                    </li>
+                    <li>
+                        Competitive programming contest organizer on <Emphasis href="https://dmoj.ca">DMOJ</Emphasis> with 9 organized contests, 12 original problems authored, and 13,000+ solution attempts
+                    </li>
+                    <li>
+                        Avid hackathon participant with 15+ hackathons and 3 wins
+                    </li>
+                </ul>
+                Side questing / hobbies:
+                <ul className="list-disc w-11/12 text-sm mb-2 mt-3 ml-8 space-y-1">
+                    <li>
+                        Teamfight Tactics, basketball, gym, food and reading
+                    </li>
+                </ul>
+                You can take a look at my <Link href="/projects" className="inline-block hover-grow emphasis">projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">resume</Emphasis> for 
+                more details and contact info. Don&apos;t hesitate to reach out!
             </p>
             <hr className="w-full h-0.25 border-slate-400 mb-1"></hr>
             <Image
