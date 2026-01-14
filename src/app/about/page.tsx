@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
-            <p className="w-11/12 text-sm mb-1">
+            <div className="w-11/12 text-sm mb-1">
                 Hi there! I&apos;m William, and this is a short summary of what I&apos;ve been up to:
                 <ul className="list-disc w-11/12 text-sm mb-2 mt-3 ml-8 space-y-1">
                     <li>
@@ -41,7 +41,7 @@ export default function About() {
                 </ul>
                 You can take a look at my <Link href="/projects" className="inline-block hover-grow emphasis">projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">resume</Emphasis> for 
                 more details and contact info. Don&apos;t hesitate to reach out!
-            </p>
+            </div>
             <hr className="w-full h-0.25 border-slate-400 mb-1"></hr>
             <Image
                 className="mb-4 max-w-[16rem] w-4/5 border-4 border-white"
