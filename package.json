@@ -14,8 +14,8 @@
     "framer-motion": "^12.4.3",
     "install": "^0.13.0",
     "lucide-react": "^0.515.0",
-    "next": "15.1.6",
-    "npm": "^10.9.2",
+    "next": "^15.1.11",
+    "npm": "^11.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0"
