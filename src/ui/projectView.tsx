@@ -18,7 +18,10 @@ export default function ProjectView({ name, desc, src, github, links, announceme
       <div className="bg-slate-950 flex flex-row justify-between w-full px-3 py-1">
         <h1 className="font-black">{name}</h1>
         <div className="flex gap-2">
-          <a href={github} target="_blank"><Github className="hover-grow"/></a>
+          {
+            github !== "" &&
+            <a href={github} target="_blank"><Github className="hover-grow"/></a>
+          }
           {
             links.map((v, index) => {
               return (

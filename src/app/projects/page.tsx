@@ -11,6 +11,7 @@ import portfolioLemonAid from "../../assets/portfolioLemonAid.jpg";
 import portfolioPicture from "../../assets/portfolioPicture.jpg";
 import portfolioRePromptThat from "../../assets/portfolioRePromptThat.jpg";
 import portfolioWatoRover from "../../assets/portfolioWatoRover.jpg";
+import portfolioVM from "../../assets/portfolioVM.jpg";
 
 export const metadata: Metadata = {
     title: "Projects"
@@ -18,6 +19,15 @@ export const metadata: Metadata = {
 
 // Twelve projects maximum? (To maintain quality)
 const projects = [
+    {
+        name: "Vim-like Text Editor",
+        desc: "Final project for CS246E (enriched). Created a Vim-like text editor with syntax highlighting, commands and separate modes. Implemented utilizing C++ and design patterns such as MVC.",
+        src: portfolioVM,
+        github: "",
+        links: [],
+        announcements: ["Class Project"],
+        tags: ["C++", "OOP", "UML"]
+    },
     {
         name: "Watonomous Wato Rover",
         desc: "Autonomy stack for the UWRT (Robotics Team) URC (University Rover Challenge) rover. Currently in development for autonomous navigation and object detection capabilities.",

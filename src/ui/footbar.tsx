@@ -36,7 +36,7 @@ export default function Footbar() {
       </div>
       {/* Copyright */}
       <div className="mb-1 flex flex-wrap items-center justify-center">
-        <p className="text-gray-300 text-xs">© 2025 William Wu</p>
+        <p className="text-gray-300 text-xs">© 2026 William Wu</p>
       </div>
     </div>
   );
