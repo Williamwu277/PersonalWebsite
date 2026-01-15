@@ -36,7 +36,7 @@ export default function About() {
                 Side questing / hobbies:
                 <ul className="list-disc w-11/12 text-sm mb-2 mt-3 ml-8 space-y-1">
                     <li>
-                        Teamfight Tactics, basketball, gym, food and reading
+                        Teamfight Tactics, basketball, gym, food and books
                     </li>
                 </ul>
                 You can take a look at my <Link href="/projects" className="inline-block hover-grow emphasis">projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">resume</Emphasis> for 
