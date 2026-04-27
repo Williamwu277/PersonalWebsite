@@ -7,7 +7,7 @@ export default function Emphasis( { children, href, currentTab, image } : { chil
             href={href}
             target={currentTab ? "_self" : "_blank"}
         >
-            {image && <Image className="w-5 inline-block rounded-md mr-1" src={image} alt="Logo" width={200} height={200} />}
+            {image && <Image className="w-5 inline-block rounded-md mr-1" src={image} alt="Logo" width={200} height={200} loading="eager" />}
             {children}
         </a>
     );
