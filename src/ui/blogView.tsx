@@ -27,7 +27,7 @@ export default function BlogView({ url, title, date, image }: BlogViewProps) {
         }
       }
       href={`/blog/${url}`}
-      className={`shadow-sm shadow-white flex flex-col items-center border-white border-[1px] w-full transform transition duration-300 ease-in-out ${hover ? 'hover:scale-105' : 'opacity-50'}`}
+      className={`flex flex-col items-center border-white border-[1px] w-full transform transition duration-300 ease-in-out ${hover ? 'hover:scale-105' : 'opacity-50'}`}
     >
       <Image 
         className="object-cover h-[10rem]"

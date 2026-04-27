@@ -28,7 +28,7 @@ export default function Navbar() {
           onClick={() => {
             if (pathname !== "/") {
               toggleDisableNav(true);
-              setTimeout(() => toggleDisableNav(false), 3500);
+              setTimeout(() => toggleDisableNav(false), 3750);
             }
           }}
         >
@@ -45,10 +45,10 @@ export default function Navbar() {
                     toggleHandler();
                     toggleDisableNav(true);
                     setTimeout(() => router.push(`/${v.toLowerCase()}`), 3000);
-                    setTimeout(() => toggleDisableNav(false), 3500);
+                    setTimeout(() => toggleDisableNav(false), 3750);
                   }
                 }}
-                className="hover-grow"
+                className={"hover-grow"}
                 href={`/${v.toLowerCase()}`}>{v}</Link>
             );
           })
