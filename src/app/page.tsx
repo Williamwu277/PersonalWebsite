@@ -50,16 +50,16 @@ export default function Home() {
                   C450,400 400,450 350,500 
                   C300,550 350,600 400,600 
                   L1000,600 L1000,0 Z"
-              fill="#0f172a" />
+              fill="#0B1A32" />
           </svg>
         </motion.div>
       )}
       <div
         onClick={handlePageTransition}
-        className={"flex flex-col gap-y-8 bg-blue-900 w-full h-[100dvh] items-center place-content-center font-clean " + (clickable ? "cursor-pointer" : "")}
+        className={"flex flex-col gap-y-4 md:gap-y-8 bg-frontpage w-full h-[100dvh] items-center place-content-center font-clean " + (clickable ? "cursor-pointer" : "")}
       >
         {/* Picture frame animations */}
-        <div className="grid grid-cols-2 md:grid-cols-[auto_auto_auto_auto] px-20 my-2 md:mt-10 gap-x-5 gap-y-5 place-items-center w-fit h-[250px] ">
+        <div className="grid grid-cols-2 md:grid-cols-[auto_auto_auto_auto] px-10 md:px-20 my-2 md:mt-10 gap-x-3 gap-y-3 md:gap-x-5 md:gap-y-5 place-items-center w-fit md:h-[250px] ">
           {
             images.map((v, index) => {
               return (
@@ -67,23 +67,24 @@ export default function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: (index + 1) * 0.5 }}
-                  key={index} className="grid grid-cols-1 grid-rows-1 justify-center items-center w-[120px] h-[150px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]"
+                  key={index} className="grid grid-cols-1 grid-rows-1 justify-center items-center w-[124px] h-[155px] md:w-[160px] md:h-[200px] lg:w-[200px] lg:h-[250px]"
                 >
                   {/* Image */}
                   <Image className="object-cover col-start-1 row-start-1 mx-auto w-[90%]" src={v} alt={"frontPage" + index} width={200} height={400} placeholder="blur" priority/>
                   {/* Picture frame #312e81 */}
                   <svg className="col-start-1 row-start-1 w-full h-full" viewBox="0 0 300 500" preserveAspectRatio="none">
+
                     <rect x="10" y="10" width="280" height="480" fill="none" stroke="white" strokeWidth="10" rx="0" />
-                    <line x1="150" y1="10" x2="150" y2="490" stroke="white" strokeWidth="10" />
-                    <line x1="10" y1="170" x2="290" y2="170" stroke="white" strokeWidth="10" />
-                    <line x1="10" y1="330" x2="290" y2="330" stroke="white" strokeWidth="10" />
+                    {/*<line x1="150" y1="10" x2="150" y2="490" stroke="white" strokeWidth="10" />*/}
+                    {/*<line x1="10" y1="170" x2="290" y2="170" stroke="white" strokeWidth="10" />*/}
+                    {/*<line x1="10" y1="330" x2="290" y2="330" stroke="white" strokeWidth="10" />*/}
                   </svg>
                 </motion.div>
               )
             })
           }
         </div>
-        <div className="flex flex-col w-full justify-center items-center gap-y-3 mt-16 md:mt-0">
+        <div className="flex flex-col w-full justify-center items-center gap-y-3">
           {/* Animate the welcome message */}
           <div className="flex flex-wrap w-fit h-full col-span-6 mx-12 gap-x-3 lg:gap-x-6 justify-center">
             {
@@ -99,7 +100,7 @@ export default function Home() {
                         if (index == 3) setClickable(true);
                       }
                     }
-                    className={(index == 3 ? "text-blue-300 " : "") + "text-4xl lg:text-5xl font-title"}
+                    className={(index == 3 ? "text-textmedium " : "text-textlight ") + "text-4xl lg:text-5xl font-title"}
                   >
                     {word}
                   </motion.h1>
@@ -108,7 +109,7 @@ export default function Home() {
             }
           </div>
           {/* Animate the name using motion paths */}
-          <div className="flex justify-center w-full max-w-[18rem] md:max-w-sm mt-8 md:mt-0">
+          <div className="flex justify-center w-full max-w-[18rem] md:max-w-sm md:mt-0">
             {
               name.map((char, index) => {
                 if (char === " ") {

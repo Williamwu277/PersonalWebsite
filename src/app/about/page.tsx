@@ -51,7 +51,7 @@ export default function About() {
                 You can take a look at my <Link href="/projects" className="inline-block hover-grow emphasis">Projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">Timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">Resume</Emphasis> for 
                 more details and contact info. Don&apos;t hesitate to reach out!
             </div>
-            <hr className="w-full h-0.25 border-slate-400 mb-1"></hr>
+            <hr className="w-3/4 h-0.25 border-slate-400 mb-1"></hr>
             <Image
                 className="mb-4 max-w-[16rem] w-4/5 border-4 border-white"
                 src={profileImage}

@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        textlight: "var(--textlight)",
+        textmedium: "var(--textmedium)",
+        frontpage: "var(--frontpage)",
       },
       fontFamily: {
         title: ['var(--font-monoton)', 'sans-serif'],

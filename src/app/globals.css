@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #0f172a;
+  --background: #0B1A32;
   --foreground: #ededed;
+  --textlight: #ffffff;
+  --textmedium: #aad6ec;
+  --frontpage: #1A3D74;
+  --bg: #0d1424;
 }
 
 body {
@@ -26,5 +30,5 @@ body {
 }
 
 .emphasis {
-  @apply text-sky-200 font-black underline underline-offset-4;
+  @apply text-textmedium font-black underline underline-offset-4;
 }
