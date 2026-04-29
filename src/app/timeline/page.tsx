@@ -4,6 +4,7 @@ import JobView from "../../ui/jobView";
 import leapAPLogo from "../../assets/logos/leapAPLogo.jpg";
 import watonomousLogo from "../../assets/logos/watonomousLogo.jpg";
 import DMOJLogo from "../../assets/logos/DMOJLogo.jpg";
+import robloxLogo from "../../assets/logos/robloxLogo.jpg";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,6 +28,12 @@ type Achievement = {
 };
 
 const jobData: Job[] = [
+    {
+        desc: "Software Engineering Intern",
+        dates: "May 2026 - Aug 2026",
+        src: robloxLogo,
+        url: "https://about.roblox.com"
+    },
     {
         desc: "LeapAP Software Developer Co-op",
         dates: "May 2025 - Aug 2025",
