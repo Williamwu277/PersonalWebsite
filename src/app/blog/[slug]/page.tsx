@@ -34,7 +34,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     const content = getPostContent(slug);
 
     return (
-        <div className="my-[122px] mx-auto max-w-xl w-4/5 mb-24">
+        <div className="my-[122px] mx-auto max-w-xl w-11/12 mb-24">
             <div className="prose prose-invert prose-hr:m-3 font-clean text-sm">
                 <ReactMarkdown
                     components={{

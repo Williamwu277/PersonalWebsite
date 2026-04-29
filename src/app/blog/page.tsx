@@ -17,7 +17,7 @@ export default function Blog() {
     }> = index;
 
     return (
-        <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-24 font-clean">
+        <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-11/12 mb-24 font-clean">
             {
                 pages.map((page, index) => (
                     <BlogView

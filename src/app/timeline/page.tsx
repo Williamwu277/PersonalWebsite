@@ -167,7 +167,7 @@ const data: Achievement[] = [
 export default function Timeline() {
 
     return (
-        <div className="my-28 mx-auto flex flex-col items-center gap-3 max-w-xl w-4/5 mb-24 font-clean">
+        <div className="my-28 mx-auto flex flex-col items-center gap-3 max-w-xl w-11/12 mb-24 font-clean">
 
             {
                 jobData.map((v, index) => {

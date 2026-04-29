@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-4/5 mb-20 font-clean">
+        <div className="my-28 mx-auto flex flex-col flex-wrap gap-3 justify-center items-center max-w-xl w-11/12 mb-20 font-clean">
             <div className="w-11/12 text-sm mb-1">
                 Hi there! I&apos;m William, and this is a short summary of what I&apos;ve been up to:
                 <ul className="list-disc w-11/12 text-sm mb-2 mt-2 ml-8 space-y-1">
