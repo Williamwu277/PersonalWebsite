@@ -2,16 +2,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image, { StaticImageData } from "next/image";
 
 type BlogViewProps = {
   url: string,
   title: string,
   date: string,
-  image: StaticImageData
 }
 
-export default function BlogView({ url, title, date, image }: BlogViewProps) {
+export default function BlogView({ url, title, date }: BlogViewProps) {
 
   // need to disable hover to remove rendering bug where border still exists after navigation
   const [hover, setHover] = useState(true);
@@ -27,18 +25,11 @@ export default function BlogView({ url, title, date, image }: BlogViewProps) {
         }
       }
       href={`/blog/${url}`}
-      className={`flex flex-col items-center border-white border-[1px] w-full transform transition duration-300 ease-in-out ${hover ? 'hover:scale-105' : 'opacity-50'}`}
+      className={`flex flex-col items-center w-full transform transition duration-300 ease-in-out ${hover ? 'hover:underline hover:decoration-2 hover:underline-offset-2 hover:scale-[1.02]' : 'opacity-50'}`}
     >
-      <Image 
-        className="object-cover h-[10rem]"
-        src={image}
-        alt="Photo"
-        width={600}
-        height={200}
-        loading="eager"
-      />
-      <div className="flex w-full justify-between border-white bg-slate-950 p-3">
+      <div className="flex w-full items-end p-1">
         <p className="font-bold text-sm">{title}</p>
+        <span className="mb-1 mx-2 h-[2px] flex-1 bg-[radial-gradient(circle,currentColor_1px,transparent_1px)] bg-[length:8px_1px]" />
         <p className="text-sm">{date}</p>
       </div>
     </Link>
