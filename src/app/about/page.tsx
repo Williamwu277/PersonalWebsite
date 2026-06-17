@@ -24,7 +24,7 @@ export default function About() {
                         Second year studying Computer Science at <Emphasis href="https://uwaterloo.ca" image={waterlooLogo}>U of Waterloo</Emphasis>
                     </li>
                     <li>
-                        Incoming Software Engineering Intern at <Emphasis href="https://www.roblox.com/Login" image={robloxLogo}>Roblox</Emphasis> in San Mateo
+                        Full-Stack Software Engineering Intern at <Emphasis href="https://www.roblox.com/Login" image={robloxLogo}>Roblox</Emphasis> in San Mateo
                     </li>
                     <li>
                         Co-Director of the autonomous Rover Team in <Emphasis href="https://www.watonomous.ca" image={watonomousLogo}>WATOnomous</Emphasis>
@@ -45,7 +45,7 @@ export default function About() {
                 Side questing:
                 <ul className="list-disc w-11/12 text-sm mb-2 mt-2 ml-8 space-y-1">
                     <li>
-                        Teamfight Tactics, where I peaked <Emphasis href="#" image={grandmasterTft} currentTab>Grandmaster 796 LP</Emphasis>, or rank 420 (top 0.06%), in North America
+                        Teamfight Tactics, where I peaked <Emphasis href="#" image={grandmasterTft} currentTab>Grandmaster 796 LP</Emphasis>, or rank 420 (top 0.06%), in North America during Set 16
                     </li>
                 </ul>
                 You can take a look at my <Link href="/projects" className="inline-block hover-grow emphasis">Projects</Link>, <Link href="/timeline" className="inline-block hover-grow emphasis">Timeline</Link>, or <Emphasis href="/ResumeWilliam.pdf">Resume</Emphasis> for 
