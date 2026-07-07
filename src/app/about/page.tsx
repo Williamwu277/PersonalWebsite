@@ -21,7 +21,7 @@ export default function About() {
                 Hi there! I&apos;m William, and this is a short summary of what I&apos;ve been up to:
                 <ul className="list-disc w-11/12 text-sm mb-2 mt-2 ml-8 space-y-1">
                     <li>
-                        Second year studying Computer Science at <Emphasis href="https://uwaterloo.ca" image={waterlooLogo}>U of Waterloo</Emphasis>
+                        Incoming third year studying Computer Science at <Emphasis href="https://uwaterloo.ca" image={waterlooLogo}>U of Waterloo</Emphasis>
                     </li>
                     <li>
                         Full-Stack Software Engineering Intern at <Emphasis href="https://www.roblox.com/Login" image={robloxLogo}>Roblox</Emphasis> in San Mateo
